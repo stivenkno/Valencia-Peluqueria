@@ -7,6 +7,13 @@
 
 body {
   background-color: gray;
+  overflow-x: hidden;
+}
+
+/* Obligar al body y al html a ocupar siempre el 100vh*/
+html,
+body {
+  height: 100%;
 }
 
 header {
@@ -58,23 +65,18 @@ a {
   border: none;
 }
 
-.menu.active {
-  display: none;
-}
-
 @media (max-width: 615px) {
   .menu {
     flex-direction: column;
-    gap: 1rem;
     position: absolute;
     right: 0;
-    padding: 1rem;
-    background-color: #ffffff;
-    z-index: 10;
     top: 62px;
-    transform: translateX(110px);
+    background-color: white;
+    text-align: center;
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
   }
+
   .menu.active {
     display: flex;
     transform: translateX(0);
